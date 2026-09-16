@@ -62,6 +62,7 @@ export async function createPost(req: Request, res: Response) {
 
   // Validasi
   const errors: string[] = [];
+  
   if (!category_id) errors.push("category_id wajib diisi");
   if (!title || typeof title !== "string" || title.trim() === "")
     errors.push("title wajib diisi");
