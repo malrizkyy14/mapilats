@@ -60,7 +60,6 @@ export async function getPostById(req: Request, res: Response) {
 export async function createPost(req: Request, res: Response) {
   const { category_id, title, content } = req.body;
 
-  // Validasi
   const errors: string[] = [];
   if (!category_id) errors.push("category_id wajib diisi");
   if (!title || typeof title !== "string" || title.trim() === "")
